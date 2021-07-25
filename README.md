@@ -1,3 +1,2 @@
-# FirstNote
+# Initial page
 
-This is my first notebook.

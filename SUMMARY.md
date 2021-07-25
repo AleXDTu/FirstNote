@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
-* [Introduction](README.md)
-* [MarkdownQuickCheck](MarkdownQuickCheck.md)
+* [Initial page](README.md)
+
