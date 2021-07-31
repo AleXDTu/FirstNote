@@ -1,5 +1,7 @@
 # Markdown速查
 
+[Markdown 教程](https://www.runoob.com/markdown/md-tutorial.html) | [Markdwon 备忘表](http://markdown.p2hp.com/cheat-sheet/)
+
 ## Markdown标题
 
 > 使用 # 号标记
@@ -211,7 +213,34 @@ Markdown 制作表格使用 | 来分隔不同的单元格，使用 - 来分隔�
 | 1 | 1 | 1 |
 | 1 | 1 | 1 |
 
+## 任务清单
+
+任务列表使您可以创建带有复选框的项目列表。  
+在支持任务列表的Markdown应用程序中，复选框将显示在内容旁边。  
+要创建任务列表，请在任务列表项之前添加破折号（-）和方括号，并[ ]在其前面加上一个空格（）。  
+要选择一个复选框，请x在方括号（[x]）之间添加in 。
+
+```Markdown
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+```
+
+呈现的输出如下所示：
+
+- [x] Write the press release
+- [ ] Update the website
+- [ ] Contact the media
+
 ## Markdown 高级技巧
+
+### 标题编号
+
+许多Markdown处理器支持标题的自定义ID-一些Markdown处理器会自动添加它们。添加自定义的ID，您可以直接链接到标题，并用CSS修改。要添加自定义标题ID，请在与标题相同的行上用大括号括起该自定义ID。
+
+```Markdown
+### My Great Heading {#custom-id}
+```
 
 ### 支持的 HTML 元素
 
@@ -224,6 +253,23 @@ Markdown 使用了很多特殊符号来表示特定的意义，如果需要显�
 ```Markdown
 **文本加粗**
 \*\* 正常显示星号 \*\*
+```
+
+Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：
+
+```Markdown
+\   反斜线
+`   反引号
+*   星号
+_   下划线
+{}  花括号
+[]  方括号
+()  小括号
+#   井字号
++   加号
+-   减号
+.   英文句点
+!   感叹号
 ```
 
 ### 公式
@@ -270,6 +316,34 @@ B --> C{条件a}
 C --> |a=1| D[结果1]
 C --> |a=2| E[结果2]
 F[竖向流程图]
+```
+
+### 标准流程图源码格式
+
+```flow
+st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st->op->cond
+cond(yes)->io->e
+cond(no)->sub1(right)->op
+```
+
+### 标准流程图源码格式（横向）
+
+```flow
+st=>start: 开始框
+op=>operation: 处理框
+cond=>condition: 判断框(是或否?)
+sub1=>subroutine: 子流程
+io=>inputoutput: 输入输出框
+e=>end: 结束框
+st(right)->op(right)->cond
+cond(yes)->io(bottom)->e
+cond(no)->sub1(right)->op
 ```
 
 ### UML时序图源码样例
